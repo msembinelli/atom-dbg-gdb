@@ -205,8 +205,7 @@ module.exports = DbgGdb =
 
 							@dbg.stop()
 
-			@sendCommand '-gdb-set mi-async on'
-				.then => begin()
+			begin()
 
 		task.catch (error) =>
 			if typeof error != 'string' then return
@@ -264,6 +263,19 @@ module.exports = DbgGdb =
 				@unseenOutputPanelContent = true
 
 		args = args.concat options.gdb_arguments||[]
+
+		if options.server_executable
+			@process = new BufferedProcess
+				command: options.server_executable
+				args: options.server_arguments
+				options:
+					cwd: cwd
+				stdout: (data) =>
+					if @logToConsole then console.log 'dbg-gdb-server < ',data
+
+				exit: (data) =>
+					if @logToConsole then console.log 'dbg-gdb-server < ',data
+
 
 		@miEmitter = new Emitter()
 		@process = new BufferedProcess
