@@ -207,13 +207,6 @@ module.exports = DbgGdb =
 
 			@sendCommand '-gdb-set mi-async on'
 				.then => begin()
-				.catch =>
-					@sendCommand '-gdb-set target-async on'
-						.then => begin()
-						.catch (error) =>
-							if typeof error != 'string' then return
-							@handleMiError error, 'Unable to debug this with GDB'
-							@dbg.stop()
 
 		task.catch (error) =>
 			if typeof error != 'string' then return
@@ -269,9 +262,6 @@ module.exports = DbgGdb =
 					@showOutputPanelNext = false
 					@outputPanel.show()
 				@unseenOutputPanelContent = true
-				
-		else if process.platform=='win32'
-			options.gdb_commands = ([].concat options.gdb_commands||[]).concat 'set new-console on'
 
 		args = args.concat options.gdb_arguments||[]
 
