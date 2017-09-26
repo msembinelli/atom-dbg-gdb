@@ -31,8 +31,8 @@ Creates a `dbgProvider` for GDB, see [basic dbgProvider  service description](ht
 > `gdb_executable` - *Optional*. The full command used to execute gdb (defaults to 'gdb')  
 > `gdb_arguments` - *Optional*. An array of extra arguments to pass to gdb (note that the arguments ['-quiet', '--interpreter=mi2'] are always included first)  
 > `gdb_commands` - *Optional*. An array of commands to pass to gdb, once active (these are executed last of all, but right before '-exec-run')  
-> `server_executable` - *Optional*. Starts a remote GDB server of your choice, ex: 'JLinkGDBServerCL')
-> `server_arguments` - *Optional*. An array of extra arguments to pass to the remote GDB server ex: ['-if', 'swd', '-device', 'nRF52832_xxAA'])
+> `server_executable` - *Optional*. Starts a remote GDB server of your choice, ex: 'JLinkGDBServerCL')  
+> `server_arguments` - *Optional*. An array of extra arguments to pass to the remote GDB server ex: ['-if', 'swd', '-device', 'nRF52832_xxAA'])  
 
 For a list of features and all available keyboard shortcuts, please see [dbg](https://atom.io/packages/dbg) and [dbg-gdb](https://atom.io/packages/dbg-gdb)
 
