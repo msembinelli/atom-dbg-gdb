@@ -39,7 +39,7 @@ For a list of features and all available keyboard shortcuts, please see [dbg](ht
 ## Example .atom-dbg.cson for nRF52 Embedded Target
 ```
 "out\\out.axf":
-	debugger: "dbg-gdb"
+	debugger: "dbg-gdb-custom-server"
 	gdb_executable: 'arm-none-eabi-gdb'
 	gdb_commands: ['target remote localhost:2331', 'monitor speed 1000',
                        'monitor clrbp', 'monitor reset', 'monitor halt',
@@ -51,8 +51,8 @@ For a list of features and all available keyboard shortcuts, please see [dbg](ht
 	cwd: "out"
 	server_executable: 'JLinkGDBServerCL'
 	server_arguments: ['-if', 'swd', '-device', 'nRF52832_xxAA',
-	                '-endian', 'little', '-speed', '1000', '-port',
-                        '2331', '-swoport', '2332', '-telnetport',
-                        '2333', '-vd', '-ir', '-localhostonly', '1',
-                        '-singlerun', '-strict', '-timeout', '0']
+	                   '-endian', 'little', '-speed', '1000', '-port',
+                           '2331', '-swoport', '2332', '-telnetport',
+                           '2333', '-vd', '-ir', '-localhostonly', '1',
+                           '-singlerun', '-strict', '-timeout', '0']
 ```
