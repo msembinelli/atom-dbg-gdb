@@ -1,8 +1,8 @@
 {
-  "name": "dbg-gdb",
+  "name": "dbg-gdb-custom-server",
   "main": "./lib/main",
-  "version": "1.7.7",
-  "description": "An interactive GDB debugger for Atom",
+  "version": "0.0.1",
+  "description": "An interactive GDB debugger for Atom. Based on dbg-gdb, but provides more customization.",
   "keywords": [
     "gdb",
     "debugger",
@@ -17,7 +17,7 @@
     "assembly",
     "Ada"
   ],
-  "repository": "https://github.com/31i73/atom-dbg-gdb",
+  "repository": "https://github.com/msembinelli/atom-dbg-gdb-custom-server",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
@@ -31,7 +31,7 @@
   },
   "providedServices": {
     "dbgProvider": {
-      "description": "Provides a dbg gdb debugger",
+      "description": "Provides a dbg gdb debugger, and optionally starting a remote GDB debug server.",
       "versions": {
         "1.1.0": "provideDbgProvider"
       }
