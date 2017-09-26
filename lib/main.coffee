@@ -36,7 +36,7 @@ module.exports = DbgGdb =
 	miEmitter: null
 
 	activate: (state) ->
-		require('atom-package-deps').install('dbg-gdb')
+		require('atom-package-deps').install('dbg-gdb-custom-server')
 
 		atom.config.observe 'dbg-gdb.logToConsole', (set) =>
 			@logToConsole = set
@@ -561,8 +561,8 @@ module.exports = DbgGdb =
 									@handleMiError error
 
 	provideDbgProvider: ->
-		name: 'dbg-gdb'
-		description: 'GDB debugger'
+		name: 'dbg-gdb-custom-server'
+		description: 'Custom GDB debugger'
 
 		canHandleOptions: (options) =>
 			return new Promise (fulfill, reject) =>
