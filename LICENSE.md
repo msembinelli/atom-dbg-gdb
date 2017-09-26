@@ -1,4 +1,5 @@
 Copyright (c) 2016, 31i73.com, for portions of project 'atom-dbg-gdb-customer-server' originating from project 'atom-dbg-gdb'.
+
 Copyright (c) 2017, Matthew Sembinelli, for portions of project 'atom-dbg-gdb-customer-server' NOT originating from project 'atom-dbg-gdb'.
 
 Permission is hereby granted, free of charge, to any person obtaining
