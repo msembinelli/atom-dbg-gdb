@@ -1,7 +1,7 @@
 {
   "name": "dbg-gdb-custom-server",
   "main": "./lib/main",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "An interactive GDB debugger for Atom. Based on dbg-gdb, but provides more customization.",
   "keywords": [
     "gdb",
