@@ -38,21 +38,21 @@ For a list of features and all available keyboard shortcuts, please see [dbg](ht
 
 ## Example .atom-dbg.cson for nRF52 Embedded Target
 ```
-"out\\current\\sys.axf":
+"out\\out.axf":
 	debugger: "dbg-gdb"
 	gdb_executable: 'arm-none-eabi-gdb'
 	gdb_commands: ['target remote localhost:2331', 'monitor speed 1000',
-								 'monitor clrbp', 'monitor reset', 'monitor halt',
-								 'monitor regs', 'monitor flash breakpoints 1',
-								 'monitor semihosting enable', 'monitor semihosting IOClient 1',
-								 'monitor SWO DisableTarget 0xFFFFFFFF',
-								 'monitor SWO EnableTarget 0 0 0x1 0']
-	path: "out\\current\\sys.axf"
-	cwd: "out\\current"
+                       'monitor clrbp', 'monitor reset', 'monitor halt',
+                       'monitor regs', 'monitor flash breakpoints 1',
+                       'monitor semihosting enable', 'monitor semihosting IOClient 1',
+                       'monitor SWO DisableTarget 0xFFFFFFFF',
+                       'monitor SWO EnableTarget 0 0 0x1 0']
+	path: "out\\out.axf"
+	cwd: "out"
 	server_executable: 'JLinkGDBServerCL'
 	server_arguments: ['-if', 'swd', '-device', 'nRF52832_xxAA',
 	                '-endian', 'little', '-speed', '1000', '-port',
-									'2331', '-swoport', '2332', '-telnetport',
-									'2333', '-vd', '-ir', '-localhostonly', '1',
-									'-singlerun', '-strict', '-timeout', '0']
-````
+                        '2331', '-swoport', '2332', '-telnetport',
+                        '2333', '-vd', '-ir', '-localhostonly', '1',
+                        '-singlerun', '-strict', '-timeout', '0']
+```
